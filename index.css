@@ -1,0 +1,126 @@
+body {
+    background-color: #EAF2F8;
+    font-family: Arial;
+    margin: 0;
+}
+
+header {
+    background-color: #AED6F1;
+    color: #154360;
+    text-align: center;
+    padding: 20px;
+}
+
+.sliding-text {
+    overflow: hidden;
+    white-space: nowrap;
+    color: #2874A6;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.sliding-text h2 {
+    display: inline-block;
+    animation: slide 8s linear infinite;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.login-box {
+    background-color: white;
+    width: 350px;
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #AAB7B8;
+}
+
+h2 {
+    text-align: center;
+    color: #2874A6;
+}
+
+label {
+    color: #154360;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 9px;
+    margin-top: 7px;
+    box-sizing: border-box;
+    border: 1px solid #85C1E9;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 11px;
+    background-color: #3498DB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #21618C;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkbox {
+    font-weight: normal;
+    color: #154360;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.forgot-link {
+    color: #2874A6;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 15px;
+    color: #154360;
+}
+
+a {
+    color: #2874A6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #AED6F1;
+    color: #154360;
+    text-align: center;
+    padding: 12px;
+}
