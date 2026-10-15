@@ -1,97 +1,67 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f8fb;
-        }
-
-        header, footer {
-            background-color: #AED6F1;
-            padding: 15px;
-            text-align: center;
-            color: #23415a;
-        }
-
-        .login-box {
-            background-color: white;
-            width: 300px;
-            margin: 60px auto;
-            padding: 25px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            box-sizing: border-box;
-        }
-
-        h2 {
-            text-align: center;
-            color: #23415a;
-        }
-
-        label {
-            display: block;
-            margin-top: 15px;
-        }
-
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            box-sizing: border-box;
-        }
-
-        input[type="submit"] {
-            width: 100%;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: green;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        .login-box p {
-            text-align: center;
-        }
-
-        a {
-            color: #21618C;
-        }
-    </style>
+    <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
 
-<header>
-    <h1>Welcome to Our Website</h1>
-</header>
+    <header>
+        <h1>Welcome Back</h1>
+        <p>Login to your account</p>
+    </header>
 
-<div class="login-box">
-    <h2>Login</h2>
+    <div class="sliding-text">
+        <h2>Welcome! Please Login to Continue.</h2>
+    </div>
 
-    <form action="thankyou.html" method="get">
-        <label>Username:</label>
-        <input type="text" name="username" required>
+    <div class="login-box">
 
-        <label>Password:</label>
-        <input type="password" name="password" required>
+        <h2>Login</h2>
 
-        <input type="submit" value="Login">
-    </form>
+        <!-- After login, open thankyou.html -->
+        <form action="thankyou.html" method="get">
 
-    <p>Don't have an account?</p>
-    <p><a href="signup.html">Create an Account</a></p>
-</div>
+            <label>Username or Email:</label>
+            <input type="text" name="username"
+                   placeholder="Enter your username or email" required>
+            <br><br>
 
-<footer>
-    <p>© 2026 Our Website | All Rights Reserved</p>
-</footer>
+            <label>Password:</label>
+            <input type="password" name="password"
+                   placeholder="Enter your password" required>
+            <br><br>
+
+            <div class="form-options">
+                <label class="checkbox">
+                    <input type="checkbox" name="remember">
+                    Remember me
+                </label>
+
+                <a href="#" class="forgot-link">Forgot password?</a>
+            </div>
+
+            <br>
+
+            <input type="submit" value="Login">
+
+        </form>
+
+        <div class="signup-link">
+            Don’t have an account?
+            <a href="signup.html">Sign up here</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Thank you for visiting our website!</p>
+    </footer>
 
 </body>
+
 </html>
