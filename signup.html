@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -102,6 +101,40 @@
             text-decoration: underline;
         }
 
+        .terms-box {
+            margin-top: 15px;
+            border: 1px solid #85C1E9;
+            border-radius: 6px;
+            padding: 10px;
+            background-color: #F4FAFD;
+        }
+
+        .terms-box summary {
+            color: #2874A6;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .terms-content {
+            margin-top: 10px;
+            color: #333;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .terms-content p {
+            margin: 0 0 8px 0;
+        }
+
+        .terms-checkbox {
+            margin-top: 12px;
+        }
+
+        .terms-checkbox label {
+            font-weight: normal;
+            color: #154360;
+        }
+
         footer {
             background-color: #AED6F1;
             color: #154360;
@@ -126,6 +159,7 @@
 
         <h2>Sign Up</h2>
 
+        <!-- This sends the user to thanku.html after clicking Sign Up -->
         <form action="thanku.html" method="get">
 
             <label>Full Name:</label>
@@ -170,10 +204,56 @@
 
             <br><br>
 
-            <input type="checkbox" name="terms" required>
-            I agree to the terms and conditions.
+            <div class="terms-box">
+                <details>
+                    <summary>Read Terms and Conditions</summary>
 
-            <br><br>
+                    <div class="terms-content">
+                        <p>
+                            1. By creating an account, you agree to provide
+                            accurate, current, and complete information.
+                        </p>
+
+                        <p>
+                            2. You are responsible for keeping your password
+                            confidential and for all activity on your account.
+                        </p>
+
+                        <p>
+                            3. Do not share your account details with anyone.
+                        </p>
+
+                        <p>
+                            4. You must not use this website for illegal,
+                            harmful, abusive, or fraudulent activities.
+                        </p>
+
+                        <p>
+                            5. We may update these terms at any time. Continued
+                            use of the website means you accept the updates.
+                        </p>
+
+                        <p>
+                            6. Your personal information will be handled
+                            according to our privacy policy.
+                        </p>
+
+                        <p>
+                            7. Accounts that violate these terms may be
+                            suspended or removed.
+                        </p>
+                    </div>
+                </details>
+
+                <div class="terms-checkbox">
+                    <input type="checkbox" name="terms" id="terms" required>
+                    <label for="terms">
+                        I agree to the Terms and Conditions.
+                    </label>
+                </div>
+            </div>
+
+            <br>
 
             <input type="submit" value="Sign Up">
 
@@ -193,4 +273,3 @@
 </body>
 
 </html>
-
