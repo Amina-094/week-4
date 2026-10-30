@@ -1,15 +1,26 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
+
+    <!-- THEME SELECTOR -->
+    <div class="theme-switcher">
+
+        <span>Choose Theme:</span>
+
+        <input type="radio" name="theme" id="blue-theme" checked>
+        <label for="blue-theme" class="blue-option">Blue</label>
+
+        <input type="radio" name="theme" id="green-theme">
+        <label for="green-theme" class="green-option">Green</label>
+
+    </div>
 
     <header>
         <h1>Welcome Back</h1>
@@ -28,12 +39,14 @@
 
             <div class="form-group">
                 <label for="username">Username or Email:</label>
+
                 <input type="text" id="username" name="username"
                     placeholder="Enter your username or email" required>
             </div>
 
             <div class="form-group">
                 <label for="password">Password:</label>
+
                 <input type="password" id="password" name="password"
                     placeholder="Enter your password" required>
             </div>
