@@ -1,264 +1,177 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Sign Up Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            background-color: #EAF2F8;
-            font-family: Arial;
-            margin: 0;
-        }
+    <title>Create Account</title>
 
-        header {
-            background-color: #AED6F1;
-            color: #154360;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .sliding-text {
-            overflow: hidden;
-            white-space: nowrap;
-            color: #2874A6;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .sliding-text h2 {
-            display: inline-block;
-            animation: slide 8s linear infinite;
-        }
-
-        @keyframes slide {
-            from {
-                transform: translateX(100%);
-            }
-
-            to {
-                transform: translateX(-100%);
-            }
-        }
-
-        .signup-box {
-            background-color: white;
-            width: 350px;
-            margin: 25px auto;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 0 10px #AAB7B8;
-        }
-
-        h2 {
-            text-align: center;
-            color: #2874A6;
-        }
-
-        label {
-            color: #154360;
-            font-weight: bold;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="password"],
-        select {
-            width: 100%;
-            padding: 9px;
-            margin-top: 7px;
-            box-sizing: border-box;
-            border: 1px solid #85C1E9;
-            border-radius: 5px;
-        }
-
-        input[type="submit"] {
-            width: 100%;
-            padding: 11px;
-            background-color: #3498DB;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #21618C;
-        }
-
-        .login-link {
-            text-align: center;
-            margin-top: 15px;
-        }
-
-        a {
-            color: #2874A6;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .terms-box {
-            margin-top: 15px;
-            border: 1px solid #85C1E9;
-            border-radius: 6px;
-            padding: 10px;
-            background-color: #F4FAFD;
-        }
-
-        .terms-box summary {
-            color: #2874A6;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .terms-content {
-            margin-top: 10px;
-            color: #333;
-            font-size: 13px;
-            line-height: 1.6;
-        }
-
-        .terms-content p {
-            margin: 0 0 8px 0;
-        }
-
-        .terms-checkbox {
-            margin-top: 12px;
-        }
-
-        .terms-checkbox label {
-            font-weight: normal;
-            color: #154360;
-        }
-
-        footer {
-            background-color: #AED6F1;
-            color: #154360;
-            text-align: center;
-            padding: 12px;
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
 
+    <!-- HEADER -->
     <header>
         <h1>Create Your Account</h1>
-        <p>Join us today!</p>
+        <p>Join our community today!</p>
     </header>
 
+    <!-- ANIMATED TEXT -->
     <div class="sliding-text">
-        <h2>Welcome! Sign Up and Join Us Today!</h2>
+        <h2>Welcome! Create Your Account Today!</h2>
     </div>
 
+    <!-- MAIN SIGNUP CARD -->
     <div class="signup-box">
 
-        <h2>Sign Up</h2>
+        <div class="form-heading">
+            <h2>Sign Up</h2>
+            <p>Fill in the information below to get started.</p>
+        </div>
 
-        <!-- This sends the user to thanku.html after clicking Sign Up -->
-        <form action="thanku.html" method="get">
+        <form action="thankyou.html" method="get">
 
-            <label>Full Name:</label>
-            <input type="text" name="fullname"
-                   placeholder="Enter your full name" required>
-            <br><br>
+            <!-- PERSONAL INFORMATION -->
+            <div class="form-section">
 
-            <label>Email:</label>
-            <input type="email" name="email"
-                   placeholder="Enter your email" required>
-            <br><br>
+                <h3>Personal Information</h3>
 
-            <label>Create Password:</label>
-            <input type="password" name="password"
-                   placeholder="Create password" required>
-            <br><br>
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
 
-            <label>Confirm Password:</label>
-            <input type="password" name="confirmPassword"
-                   placeholder="Confirm password" required>
-            <br><br>
+                    <input type="text" id="fullname"
+                        name="fullname"
+                        placeholder="Enter your full name"
+                        required>
+                </div>
 
-            <label>Gender:</label>
-            <br><br>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
 
-            <input type="radio" name="gender" value="Male" required>
-            Male
+                    <input type="email" id="email"
+                        name="email"
+                        placeholder="example@gmail.com"
+                        required>
+                </div>
 
-            <input type="radio" name="gender" value="Female">
-            Female
+                <div class="form-group">
+                    <label>Gender</label>
 
-            <br><br>
+                    <div class="gender-options">
 
-            <label>Country:</label>
-            <select name="country" required>
-                <option value="">Select Country</option>
-                <option value="Pakistan">Pakistan</option>
-                <option value="India">India</option>
-                <option value="China">China</option>
-                <option value="Other">Other</option>
-            </select>
+                        <label class="normal-label">
+                            <input type="radio"
+                                name="gender"
+                                value="Male"
+                                required>
+                            Male
+                        </label>
 
-            <br><br>
+                        <label class="normal-label">
+                            <input type="radio"
+                                name="gender"
+                                value="Female">
+                            Female
+                        </label>
 
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country</label>
+
+                    <select name="country" id="country" required>
+
+                        <option value="">Select your country</option>
+                        <option value="Pakistan">Pakistan</option>
+                        <option value="India">India</option>
+                        <option value="China">China</option>
+                        <option value="Other">Other</option>
+
+                    </select>
+                </div>
+
+            </div>
+
+            <!-- ACCOUNT INFORMATION -->
+            <div class="form-section">
+
+                <h3>Account Information</h3>
+
+                <div class="form-group">
+                    <label for="password">Create Password</label>
+
+                    <input type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Create a password"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+
+                    <input type="password"
+                        id="confirmPassword"
+                        name="confirmPassword"
+                        placeholder="Confirm your password"
+                        required>
+                </div>
+
+            </div>
+
+            <!-- TERMS AND CONDITIONS -->
             <div class="terms-box">
+
                 <details>
-                    <summary>Read Terms and Conditions</summary>
+
+                    <summary>Terms and Conditions</summary>
 
                     <div class="terms-content">
-                        <p>
-                            1. By creating an account, you agree to provide
-                            accurate, current, and complete information.
-                        </p>
 
-                        <p>
-                            2. You are responsible for keeping your password
-                            confidential and for all activity on your account.
-                        </p>
+                        <p>1. Provide accurate and complete information.</p>
 
-                        <p>
-                            3. Do not share your account details with anyone.
-                        </p>
+                        <p>2. Keep your password confidential.</p>
 
-                        <p>
-                            4. You must not use this website for illegal,
-                            harmful, abusive, or fraudulent activities.
-                        </p>
+                        <p>3. Do not share your account details.</p>
 
-                        <p>
-                            5. We may update these terms at any time. Continued
-                            use of the website means you accept the updates.
-                        </p>
+                        <p>4. Do not use this website for illegal activities.</p>
 
-                        <p>
-                            6. Your personal information will be handled
-                            according to our privacy policy.
-                        </p>
+                        <p>5. We may update these terms at any time.</p>
 
-                        <p>
-                            7. Accounts that violate these terms may be
-                            suspended or removed.
-                        </p>
+                        <p>6. Your personal information will be handled
+                            according to our privacy policy.</p>
+
+                        <p>7. Accounts violating these terms may be suspended.</p>
+
                     </div>
+
                 </details>
 
                 <div class="terms-checkbox">
-                    <input type="checkbox" name="terms" id="terms" required>
-                    <label for="terms">
+
+                    <input type="checkbox"
+                        name="terms"
+                        id="terms"
+                        required>
+
+                    <label for="terms" class="normal-label">
                         I agree to the Terms and Conditions.
                     </label>
+
                 </div>
+
             </div>
 
-            <br>
-
-            <input type="submit" value="Sign Up">
+            <!-- SUBMIT BUTTON -->
+            <input type="submit" value="Create Account">
 
         </form>
 
+        <!-- LOGIN LINK -->
         <div class="login-link">
             Already have an account?
             <a href="index.html">Login here</a>
@@ -266,10 +179,10 @@
 
     </div>
 
+    <!-- FOOTER -->
     <footer>
         <p>Thank you for visiting our website!</p>
     </footer>
 
 </body>
-
 </html>
